@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Registration form</title>
+</head>
+<body>
+<h1>REGISTRATION FORM</h1>
+<form>
+<table borde="0">
+<tr>
+<td><label for="fname">Name</label></td><td>:</td><td></td>
+<td><input type="text" placeholder="Enter your name" name="fname"></td>
+</tr>
+<tr>
+<td><label for="femail">Email</label></td><td>:</td><td></td>
+<td><input type="text" placeholder="Enter email id" name="fmail"></td>
+</tr>
+<tr>
+<td><label for="ftel">Telephone</label></td><td>:</td><td></td>
+<td><input type="tel" name="ftel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></td>
+</tr>
+<tr>
+<td><label for="fgen">Gender</label></td><td>:</td><td></td>
+<td>Male<input type="radio" value="male">Female<input type="radio" value="female"></td>
+</tr>
+<tr>
+<td><label for="fhob">Hobbies</label></td><td>:</td><td></td>
+<td>Gardening<input type="checkbox" value="Gaedening"> music<input type="checkbox" value="music"> Reading<input type="checkbox" value="Reading"></td>
+</tr>
+<tr>
+<td><label for="fnan">Nationality</td><td>:</td><td></td>
+<td>
+<select>
+<option>Indian</option>
+<option>Pakistan</option>
+<option>Japan</option>
+</select>
+</td>
+<tr>
+<td><input type="submit" value="Submit"></td>
+<td><input type="reset" value="Reset"></td>
+</table>
+</body>
+</html>
