@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>form validation</title>
+</head>
+<body bgcolor="lightgreen">
+<h1 align="center">FORM VALIDATION</h1>
+<form name="form" action=""method="POST" onsubmit="return validate_Form()">
+<table align="center">
+<tr>
+<th>Name</th>
+<td><input type="text" name="name"></td>
+</tr>
+<tr>
+<th>Email</th>
+<td><input type="email" name="email"></td>
+</tr>
+<tr>
+<th>Mobile Number</th>
+<td><input type="tel" name="mobile"></td>
+</tr>
+<tr>
+<th>User Name</th>
+<td><input type="text" name=user"></td>
+</tr>
+<tr>
+<th>Password</th>
+<td><input type="password" name="password"></td>
+</tr>
+<tr class="center">
+<td><input type="reset" value="reset"></td>
+<td colspan="2"><input type="submit" value="submit"></td>
+</tr>
+</table>
+</form>
+<script>
+function validate_Form(){
+ var name=document.form.name.value;
+ var email=document.form.email.value;
+ var mobile=document.form.mobile,value;
+ var user=document.form.user.value;
+ var password=document.form.password.value;
+ var re=/^(?=.*\d)(?=.*[!@#$%^&*](?=.[a-z])(/=.*[A-Z]).{8}$/;
+ var ren=/[0-9!@#$%^&*]/
+ if(name==""){
+  alert("Enter Name");
+  document.form.name.focus();
+  return false;
+ }
+ else if(ren.test(name)){
+   alert("Enter email");
+   document.form.email.focus();
+   return false;
+ }
+ if(email==""){
+  alert(Enter email");
+  document.form.email.focus();
+  return false;
+ }
+ if(mobie==""){
+   alert("Enter Mobile Number");
+   return false;
+ }
+ else if(isNaN(mobile)){
+   alert("Enter valid Mobile Number");
+   return false;
+ }
+ else if(mobile.length!=10){
+    alert("Enter Mobile number with 10 digit");
+    return false;
+ }
+ if(user==""){
+  alert("Enter User Name");
+  document.form.user.focus();
+  return false;
+ }
+ if(password==""||password.length<9||!re.test(password)){
+   alert("Enter minimum 8 characters and digits!!"+'\n'+"Atleast one Lowercase& uppercase& digits& special character must be included");
+   document.form.password.focus();
+   return false;
+ }
+}
+</script>
+</body>
+</html>
+
